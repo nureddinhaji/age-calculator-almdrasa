@@ -1,4 +1,7 @@
 const dayInput = document.querySelector("#day");
+const monthInput = document.querySelector("#month");
+const yearInput = document.querySelector("#year");
+
 function checkDay(day) {
     if(day < 0 || day > 31) {
         dayInput.classList.add("card__input--error")
@@ -7,12 +10,21 @@ function checkDay(day) {
     }
 }
 
+function checkMonth(month) {
+    if(month < 0 || month > 12) {
+        monthInput.classList.add("card__input--error")
+    } else {
+        monthInput.classList.remove("card__input--error")
+    }
+}
+
 document.querySelector(".card__button").addEventListener("click", () => {
     const day = dayInput.value;
     const month = document.querySelector("#month").value;
-    const year = document.querySelector("#year").value;
+    const year = yearInput.value;
 
     checkDay(day);
+    checkMonth(month);
     const birthDay = new Date(`${year}-${month}-${day}`);
     const dateNow = new Date();
 
@@ -22,6 +34,5 @@ document.querySelector(".card__button").addEventListener("click", () => {
 
     const ageYear = ageMS / msInYear
     
-    console.log(birthDay)
     document.querySelector(".card__result-age").textContent = Math.round(ageYear)
 })
