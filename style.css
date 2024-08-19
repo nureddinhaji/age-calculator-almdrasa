@@ -1,6 +1,7 @@
 :root {
     --main-dark-color: #485488;
     --main-light-color: #c1c0ed;
+    --red-color: #e15d5d;
 }
 
 /* Reset Css */
@@ -91,15 +92,26 @@ body {
     max-width: 15rem;
     width: 100%;
     padding: 1rem;
-    border: 1px solid var(--main-light-color);
+    border: 2px solid var(--main-light-color);
     border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.card__input--error {
+    border-color: var(--red-color);
 }
 
 .card__error {
     font-size: 1.2rem;
-    color: #e15d5d;
+    color: var(--red-color);
+    transition: 0.3s;
     opacity: 0;
     visibility: hidden;
+}
+
+.card__input--error+ .card__error{
+    opacity: 1;
+    visibility: visible;
 }
 
 .card__middle {

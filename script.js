@@ -1,10 +1,18 @@
-document.querySelector(".card__button").addEventListener("click", () => {
+const dayInput = document.querySelector("#day");
+function checkDay(day) {
+    if(day < 0 || day > 31) {
+        dayInput.classList.add("card__input--error")
+    } else {
+        dayInput.classList.remove("card__input--error")
+    }
+}
 
-    
-    const day = document.querySelector("#day").value;
+document.querySelector(".card__button").addEventListener("click", () => {
+    const day = dayInput.value;
     const month = document.querySelector("#month").value;
     const year = document.querySelector("#year").value;
 
+    checkDay(day);
     const birthDay = new Date(`${year}-${month}-${day}`);
     const dateNow = new Date();
 
