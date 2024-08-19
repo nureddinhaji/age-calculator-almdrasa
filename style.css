@@ -71,7 +71,7 @@ body {
     padding: 3rem;
     background-color: white;
     border-radius: 25px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
 }
 
 .card__form {
@@ -98,6 +98,8 @@ body {
 .card__error {
     font-size: 1.2rem;
     color: #e15d5d;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .card__middle {
@@ -138,4 +140,5 @@ body {
 
 .card__result-age {
     color: var(--main-dark-color);
+    font-size: 4rem;
 }

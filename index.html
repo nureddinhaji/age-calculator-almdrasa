@@ -19,17 +19,17 @@
                 <form action="" class="card__form">
                     <div class="card__field">
                         <label for="day" class="card__label">Day</label>
-                        <input type="number" id="day" class="card__input" placeholder="DD" />
+                        <input type="number" id="day" class="card__input" placeholder="DD" min="1" max="31"/>
                         <span class="card__error">must be a valid day</span>
                     </div>
                     <div class="card__field">
                         <label for="month" class="card__label">Month</label>
-                        <input type="number" id="month" class="card__input" placeholder="MM"/>
+                        <input type="number" id="month" class="card__input" placeholder="MM" min="1" max="12"/>
                         <span class="card__error">must be a valid month</span>
                     </div>
                     <div class="card__field">
                         <label for="year" class="card__label">Year</label>
-                        <input type="number" id="year" class="card__input" placeholder="YYYY"/>
+                        <input type="number" id="year" class="card__input" placeholder="YYYY" min="1"/>
                         <span class="card__error">must be a valid year</span>
                     </div>
                 </form>
