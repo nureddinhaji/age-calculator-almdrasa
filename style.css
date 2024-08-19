@@ -137,6 +137,16 @@ body {
     background-color: var(--main-dark-color);
     color: white;
     position: relative;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__svg {
+    width: 3rem;
+    height: 3rem;
+    fill: white;
 }
 
 .card__result {

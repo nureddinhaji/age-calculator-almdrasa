@@ -1,10 +1,16 @@
+const button = document.querySelector(".card__button");
 const dayInput = document.querySelector("#day");
 const monthInput = document.querySelector("#month");
 const yearInput = document.querySelector("#year");
 const currentYear = new Date().getFullYear();
 
 function cheakInputs(input, max, dom) {
-    if (input < 0 || input > max || input == "" || !Number.isInteger(Number(input))) {
+    if (
+        input < 0 ||
+        input > max ||
+        input == "" ||
+        !Number.isInteger(Number(input))
+    ) {
         dom.classList.add("card__input--error");
         return false;
     } else {
@@ -13,7 +19,13 @@ function cheakInputs(input, max, dom) {
     }
 }
 
-document.querySelector(".card__button").addEventListener("click", () => {
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" && button) {
+        button.click();
+    }
+});
+
+button.addEventListener("click", () => {
     const day = dayInput.value;
     const month = monthInput.value;
     const year = yearInput.value;
@@ -23,7 +35,7 @@ document.querySelector(".card__button").addEventListener("click", () => {
     const yearValidate = cheakInputs(year, currentYear, yearInput);
 
     if (dayValidate && monthValidate && yearValidate) {
-        const birthDay = new Date(`${year}-${month}-${day}`);
+        const birthDay = new Date(`${year}-${month - 1}-${day}`);
         const dateNow = new Date();
 
         const ageMS = dateNow - birthDay;
@@ -33,7 +45,7 @@ document.querySelector(".card__button").addEventListener("click", () => {
         const ageYear = ageMS / msInYear;
 
         document.querySelector(".card__result-age").textContent =
-            Math.round(ageYear);
+            Math.floor(ageYear);
     } else {
         document.querySelector(".card__result-age").textContent = "--";
     }
