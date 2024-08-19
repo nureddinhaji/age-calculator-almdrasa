@@ -1,0 +1,141 @@
+:root {
+    --main-dark-color: #485488;
+    --main-light-color: #c1c0ed;
+}
+
+/* Reset Css */
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(127,122,217,1) 0%, rgba(103,103,191,1) 46%, var(--main-dark-color) 100%);
+    padding: 2.5rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: white;
+}
+
+/* Card */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.card__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.card__input {
+    max-width: 15rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--main-light-color);
+    border-radius: 0.5rem;
+}
+
+.card__error {
+    font-size: 1.2rem;
+    color: #e15d5d;
+}
+
+.card__middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card__middle::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-light-color);
+    position: absolute;
+    inset-inline-start: 0;
+    z-index: 0;
+}
+
+.card__button {
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--main-dark-color);
+    color: white;
+    position: relative;
+}
+
+.card__result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__result-label {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.card__result-age {
+    color: var(--main-dark-color);
+}
