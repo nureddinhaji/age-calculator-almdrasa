@@ -10,7 +10,7 @@ This is a simple age calculator web application built using HTML, CSS, and JavaS
 
 ## Live Demo
 
-You can try out the age calculator here: [Age Calculator Web App]([https://nureddinhaji.github.io/calculator-web-app-almdrasa/](https://nureddinhaji.github.io/age-calculator-almdrasa/))
+You can try out the age calculator here: [Age Calculator Web App](https://nureddinhaji.github.io/age-calculator-javascript/)
 
 ## Screenshots
 
