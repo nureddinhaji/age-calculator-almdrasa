@@ -35,7 +35,7 @@ button.addEventListener("click", () => {
     const yearValidate = cheakInputs(year, currentYear, yearInput);
 
     if (dayValidate && monthValidate && yearValidate) {
-        const birthDay = new Date(`${year}-${month - 1}-${day}`);
+        const birthDay = new Date(year,month-1,day);
         const dateNow = new Date();
 
         const ageMS = dateNow - birthDay;
